@@ -1,0 +1,8 @@
+prefix=/home/dimash/snake_robot/devel
+
+Name: robot_control
+Description: Description of robot_control
+Version: 0.0.0
+Cflags: -I/home/dimash/snake_robot/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

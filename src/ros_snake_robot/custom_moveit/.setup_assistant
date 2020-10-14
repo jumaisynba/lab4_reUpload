@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_description
+    relative_path: moveit_robot.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/hand_tutorial.srdf
+  CONFIG:
+    author_name: Dinmukhammed Mukashev
+    author_email: dinmukhammed.mukashev@nu.edu.kz
+    generated_timestamp: 1600941224

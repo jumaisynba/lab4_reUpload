@@ -1,0 +1,2 @@
+dynamixel_motor/dynamixel_controllers:dynamixel_motor/dynamixel_driver:dynamixel_motor/dynamixel_motor:dynamixel_motor/dynamixel_msgs:dynamixel_motor/dynamixel_tutorials:ros_snake_robot/commander2:ros_snake_robot/custom_moveit:ros_snake_robot/gazebo_robot:ros_snake_robot/moveit_arm:ros_snake_robot/my_dynamixel_tutorial:ros_snake_robot/robot_control:ros_snake_robot/robot_description
+-DCATKIN_DEVEL_PREFIX=/home/dimash/snake_robot/devel -DCMAKE_INSTALL_PREFIX=/home/dimash/snake_robot/install -G Unix Makefiles

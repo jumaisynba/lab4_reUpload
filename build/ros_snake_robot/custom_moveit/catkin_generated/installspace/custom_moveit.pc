@@ -1,0 +1,8 @@
+prefix=/home/dimash/snake_robot/install
+
+Name: custom_moveit
+Description: Description of custom_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

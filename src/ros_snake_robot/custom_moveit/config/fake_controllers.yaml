@@ -1,0 +1,10 @@
+controller_list:
+  - name: fake_group1_controller_controller
+    joints:
+      - motortom2m
+      - joint2
+      - joint4
+      - joint6
+  - name: fake_group2_controller_controller
+    joints:
+      - end

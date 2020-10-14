@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/circle.dir/src/circle.cpp.o  -o /home/dimash/snake_robot/devel/lib/commander2/circle -rdynamic 
