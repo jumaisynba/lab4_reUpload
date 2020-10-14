@@ -34,7 +34,7 @@ int main(int argc, char **argv)
                                                 //geometry_msgs::PoseStamped, google what is the type of this msg
     current_pose = move_group.getCurrentPose(); /* Retrieving theinformation about the current position and orientation of the end effector*/
     target_pose = current_pose;
-
+    //go to convinient position 
     target_pose.pose.position.x = target_pose.pose.position.x - 1.4;
     target_pose.pose.position.y = target_pose.pose.position.y + 0.5;
 
@@ -59,17 +59,12 @@ int main(int argc, char **argv)
             {
                 angle = 0;
             }
+            //0.05 is a radius
             target_pose.pose.position.x = current_pose.pose.position.x + 0.05 * cos(angle);
             target_pose.pose.position.y = current_pose.pose.position.y + 0.05 * sin(angle);
             move_group.setApproximateJointValueTarget(target_pose);
             move_group.move();
-            /*            while (abs(current_pose.pose.position.x - target_pose.pose.position.x) > 0.01)
-            {
-                current_pose = move_group.getCurrentPose();
-                ROS_INFO("Here");
-                move_group.setApproximateJointValueTarget(target_pose);
-                move_group.move();
-            }*/
+
             angle = angle + 0.1;
         }
         loop_rate.sleep();
@@ -79,22 +74,4 @@ int main(int argc, char **argv)
     return 0;
 }
 
-/*geometry_msgs::PoseStamped GetTargetPose(geometry_msgs::PoseStamped target_pose)
-{
-    geometry_msgs::PoseStamped target;
-    if (xPos && !yPos && !xNeg && !yNeg && !called2)
-    {
-        target = target_pose.pose.position.y;
-    }
-    else if (xPos && yPos && !xNeg && !yNeg)
-    {
-        target_pose.pose.position.x = target_pose.pose.position.x + 1;
-        target = target_pose.pose.position.x;
-    }
-    else if (xPos && yPos && xNeg && !yNeg)
-    {
-        target_pose.pose.position.y = target_pose.pose.position.y + 1;
-        target = target_pose.pose.position.y;
-    }
-    return target;
-}*/
+
